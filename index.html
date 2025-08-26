@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Minimal Fragment Shader Playground</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            background: #000;
+            overflow: hidden;
+        }
+
+        /* Canvas fills the viewport; actual pixel size set in JS for crispness */
+        canvas {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="gl"></canvas>
+    <script src="app.js"></script>
+</body>
+
+</html>
