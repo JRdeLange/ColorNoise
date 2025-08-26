@@ -9,7 +9,7 @@ uniform float u_time;
 
 // --------- Tweakables (super cheap) ----------
 const float SCALE          = 5.0;  // base frequency
-const int   OCTAVES        = 4;    // try 2 for ultra speed
+const int   OCTAVES        = 3;    // try 2 for ultra speed
 const float LACUNARITY     = 1.5;  // freq multiplier
 const float GAIN           = 0.5;  // amplitude falloff
 const float PEAKINESS      = 0.95; // 0 = soft, 1 = peaky/ridged feel
@@ -130,3 +130,4 @@ void main(){
   fragColor = vec4(colorFunc(n), 1.0);
   // -- MAIN
 }
+
