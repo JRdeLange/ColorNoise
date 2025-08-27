@@ -117,7 +117,7 @@ void main() {
               cos(rot_radians)) *
          uv;
 
-    // stretch x and y slightly
+    // stretch x slightly
     uv = vec2(uv.x + 0.2 * sin(u_time * 0.1), uv.y);
 
     // 3D point (Z scrolls over time)
