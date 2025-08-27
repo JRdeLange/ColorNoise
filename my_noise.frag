@@ -14,7 +14,7 @@ const float LACUNARITY = 1.5;      // freq multiplier
 const float GAIN = 0.5;            // amplitude falloff
 const float PEAKINESS = 0.95;      // 0 = soft, 1 = peaky/ridged feel
 const float CONTRAST_POW = 2.0;    // extra shaping (1 = none)
-const float SCROLL_SPEED_Z = 0.2;  // scroll through Z
+const float SCROLL_SPEED_Z = 0.0;  // scroll through Z
 const float INNER_PEAKINESS = 3.0;
 const float PI = 3.14159265359;
 // ---------------------------------------------
@@ -116,6 +116,9 @@ void main() {
     uv = mat2(cos(rot_radians), -sin(rot_radians), sin(rot_radians),
               cos(rot_radians)) *
          uv;
+
+    // stretch x and y slightly
+    uv = vec2(uv.x + 0.2 * sin(u_time * 0.1), uv.y);
 
     // 3D point (Z scrolls over time)
     float move_scale = SCALE + sin(u_time * 0.3) * 2.0;
